@@ -39,7 +39,7 @@ const Carousel = () => {
         setCurrentIndex((prevIndex) => (prevIndex + 1) % contents.length);
         setFade(true);
       }, 400);
-    }, 5000);
+    }, 3000);
 
     return () => clearInterval(timerId);
   }, []);

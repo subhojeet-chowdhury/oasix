@@ -26,6 +26,7 @@ const HeroSection = () => {
           position={building.position}
         />
       ))}
+
       <Buildings buildings={buildings} />
     </section>
   );
@@ -63,11 +64,11 @@ const Buildings = ({ buildings }: BuildingsProp) => {
           {buildings.map((building) => {
             return (
               <div className="checkbox-item">
-                <label htmlFor="building1">
+                <label htmlFor={building.building}>
                   <i className="fa-solid fa-building"></i>
                   {building.building}
                 </label>
-                <input type="checkbox" id="building1" name="building1" />
+                <input type="checkbox" id={building.building} name={building.building} />
               </div>
             );
           })}

@@ -9,6 +9,7 @@
   letter-spacing: -2px;
   color: var(--white-primary);
   margin-bottom: 2rem;
+  text-align: left;
 }
 
 .galleries {
@@ -26,7 +27,6 @@
 }
 
 .gallery {
-  width: 600px;
   background-color: var(--bg-deep-glass);
   display: flex;
   justify-content: center;
@@ -57,7 +57,8 @@
 }
 
 .gallery-content {
-  width: 250px;
+  width: 260px;
+  text-align: left;
 }
 
 .gallery-content h3 {
