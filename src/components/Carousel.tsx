@@ -29,6 +29,8 @@ const Carousel = () => {
     },
   ];
 
+  const sliders = [0, 1, 2, 3, 4, 5];
+
   const [currentIndex, setCurrentIndex] = useState(0);
   const [fade, setFade] = useState(true);
 
@@ -54,8 +56,8 @@ const Carousel = () => {
         <h3>oasix</h3>
       </div>
       <div className="carousel-slider">
-        {contents.map((content, index) => {
-          if (index === currentIndex) return <span className="slide slide-active"></span>;
+        {sliders.map((slider) => {
+          if (slider === currentIndex) return <span className="slide slide-active"></span>;
           else return <span className="slide"></span>;
         })}
       </div>
