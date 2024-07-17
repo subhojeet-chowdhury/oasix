@@ -45,7 +45,7 @@ const Carousel = () => {
   }, []);
 
   return (
-    <div className="carousel-container">
+    <section className="carousel-container">
       <div className="carousel-content">
         <h2 className={fade ? "fade-in" : "fade-out"}>
           {contents[currentIndex].start}
@@ -59,7 +59,7 @@ const Carousel = () => {
           else return <span className="slide"></span>;
         })}
       </div>
-    </div>
+    </section>
   );
 };
 

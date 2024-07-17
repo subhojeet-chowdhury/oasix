@@ -1,4 +1,5 @@
 import Carousel from "./components/Carousel.tsx";
+import Gallery from "./components/Gallery.tsx";
 import Header from "./components/Header.tsx";
 import HeroSection from "./components/HeroSection.tsx";
 
@@ -8,6 +9,7 @@ const App = () => {
       <Header />
       <HeroSection />
       <Carousel />
+      <Gallery />
     </div>
   );
 };
