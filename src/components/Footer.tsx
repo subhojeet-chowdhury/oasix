@@ -1,4 +1,4 @@
-import logo from "../assets/oasix_logo.png";
+import logo from "../assets/oasix-logo.svg";
 import "../styles/Footer.css";
 
 const Footer = () => {

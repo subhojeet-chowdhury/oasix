@@ -1,5 +1,5 @@
 import "../styles/Header.css";
-import logo from "../assets/oasix_logo.png";
+import logo from "../assets/oasix-logo.svg";
 
 const Header = () => {
   return (

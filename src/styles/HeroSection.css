@@ -1,5 +1,5 @@
 .hero-container {
-  background-image: url(../assets/hero_image.png);
+  background-image: url(../assets/hero-image.svg);
   height: 100vh;
   background-size: cover;
   background-position: center;
@@ -139,4 +139,21 @@
   .badge-container {
     display: none;
   }
+}
+
+.slider {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.slider span {
+  display: inline-block;
+  width: 16rem;
+  height: 0.4rem;
+  border-radius: 2rem;
+  background: linear-gradient(90deg, var(--text-secondary) 20%, #ffffff4d 20%);
+  position: relative;
+  z-index: 1;
 }

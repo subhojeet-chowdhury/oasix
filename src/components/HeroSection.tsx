@@ -12,9 +12,9 @@ interface BuildingsProp {
 
 const HeroSection = () => {
   const buildings = [
-    { building: "Building 1", available: false, position: { x: 10, y: 17 } },
-    { building: "Building 2", available: true, position: { x: 9, y: 36 } },
-    { building: "Building 3", available: false, position: { x: 12, y: 52 } },
+    { building: "Building 1", available: false, position: { x: 17, y: 17 } },
+    { building: "Building 2", available: true, position: { x: 15, y: 38 } },
+    { building: "Building 3", available: false, position: { x: 19, y: 55 } },
   ];
 
   return (
@@ -28,6 +28,9 @@ const HeroSection = () => {
       ))}
 
       <Buildings buildings={buildings} />
+      <div className="slider">
+        <span></span>
+      </div>
     </section>
   );
 };
