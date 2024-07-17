@@ -1,5 +1,6 @@
 .galleries-container {
   margin-top: 4rem;
+  text-align: center;
 }
 
 .galleries-container > h2 {
@@ -72,4 +73,28 @@
   line-height: 2rem;
   margin-top: 1rem;
   color: var(--white-primary);
+}
+
+.galleries-container button {
+  padding: 2rem 3rem;
+  font-size: 1.5rem;
+  border-radius: 4rem;
+  background-color: var(--bg-deep-glass);
+  color: var(--text-secondary);
+  margin: 2rem 0;
+  position: relative;
+  cursor: pointer;
+}
+
+.galleries-container button::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  bottom: -2px;
+  left: -2px;
+  right: -2px;
+  background: linear-gradient(160deg, var(--text-secondary) 50%, var(--text-quaterary) 100%);
+  border-radius: inherit;
+  z-index: -1;
+  pointer-events: none;
 }
