@@ -4,7 +4,7 @@
   background-size: cover;
   background-position: center;
   border-radius: 2rem;
-  margin-top: 2rem;
+  margin-top: 3rem;
   position: relative;
 }
 
@@ -127,4 +127,13 @@
 
 .badge ul li {
   margin-left: 0.5rem;
+}
+
+@media (max-width: 1024px) {
+  .buildings-container {
+    display: none;
+  }
+  .badge-container {
+    display: none;
+  }
 }
