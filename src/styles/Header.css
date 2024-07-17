@@ -1,0 +1,149 @@
+.header-container {
+  height: 100vh;
+  background: var(--bg-deep-glass);
+  position: relative;
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-container::before {
+  content: "";
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  right: -1px;
+  bottom: -1px;
+  background: linear-gradient(
+    160deg,
+    var(--border-primary) 2%,
+    var(--border-secondary-1) 40%,
+    var(--border-secondary-1) 55%,
+    var(--border-tertiary) 100%
+  );
+  border-radius: 31px;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.header-group {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-image {
+  width: 12rem;
+  height: 4.5rem;
+}
+
+.header-image img {
+  height: 100%;
+  width: 100%;
+}
+
+.header-content h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: -2px;
+  background: linear-gradient(
+    130deg,
+    var(--text-primary) 12%,
+    var(--text-secondary) 44%,
+    var(--text-tertiary) 100%
+  );
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin: 0.8rem 0;
+}
+
+.input-group {
+  position: relative;
+  width: 25rem;
+  height: 4rem;
+}
+
+.input-group::before {
+  content: "";
+  position: absolute;
+  top: -1px;
+  bottom: -1px;
+  left: -1px;
+  right: -1px;
+  background: linear-gradient(
+    160deg,
+    var(--border-primary) 2%,
+    var(--border-secondary-2) 40%,
+    var(--border-secondary-2) 55%,
+    var(--border-tertiary) 100%
+  );
+  border-radius: 2.6rem;
+}
+
+.input-group input {
+  width: 21rem;
+  height: 100%;
+  border-radius: 2.5rem;
+  background: var(--bg-deep-glass);
+  border: none;
+  padding: 0 1.5rem;
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--white-primary);
+}
+
+.input-group input:focus {
+  outline: none;
+}
+
+.input-search {
+  height: 4rem;
+  width: 4rem;
+  border-radius: 50%;
+  background: linear-gradient(150deg, var(--text-secondary) 50%, var(--text-tertiary) 100%);
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--white-primary);
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 2;
+  box-shadow: 0px 2px 4px 0px #ffffff1a;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.scroll-group {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.scroll-down {
+  height: 2.5rem;
+  width: 1rem;
+  font-size: 1.2rem;
+  color: var(--white-secondary);
+  padding: 0.4rem;
+  border: 2px solid var(--white-secondary);
+  border-radius: 2rem;
+}
+
+.scroll-description {
+  color: var(--white-secondary);
+  margin: 1rem 0;
+  font-weight: 600;
+  font-size: 0.8rem;
+  line-height: 1rem;
+}
