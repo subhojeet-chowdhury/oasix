@@ -1,0 +1,130 @@
+.hero-container {
+  background-image: url(../assets/hero_image.png);
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  border-radius: 2rem;
+  margin-top: 2rem;
+  position: relative;
+}
+
+.buildings-container {
+  position: absolute;
+  right: 1rem;
+  bottom: 1rem;
+}
+
+.buildings-sub-container {
+  display: inline-block;
+  padding: 2rem 3rem;
+  border-radius: 2rem;
+  color: var(--white-primary);
+  position: relative;
+  background: var(--deep-glass);
+  backdrop-filter: blur(10px);
+}
+
+.buildings-sub-container::before {
+  content: "";
+  position: absolute;
+  top: -1px;
+  bottom: -1px;
+  left: -1px;
+  right: -1px;
+  border-radius: inherit;
+  background: linear-gradient(
+    160deg,
+    var(--border-primary) 2%,
+    var(--border-secondary-1) 40%,
+    var(--border-secondary-1) 55%,
+    var(--border-tertiary) 100%
+  );
+  z-index: -1;
+}
+
+.buildings-container h2 {
+  font-weight: 400;
+  font-size: 2rem;
+}
+
+.checkbox-group {
+  font-weight: 600;
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+
+.checkbox-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem 0;
+}
+
+.checkbox-item label {
+  margin-right: 1.5rem;
+}
+
+.checkbox-item label i {
+  margin-right: 1rem;
+}
+
+.checkbox-item input[type="checkbox"] {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--white-primary);
+  border-radius: 50%;
+  position: relative;
+  outline: none;
+  background-color: transparent;
+  padding: 4px;
+}
+
+.checkbox-item input[type="checkbox"]::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  border-radius: 50%;
+  transition: background-color 0.1s ease;
+}
+
+.checkbox-item input[type="checkbox"]:checked::before {
+  background-color: var(--text-secondary);
+}
+.checkbox-item input[type="checkbox"]:checked {
+  border: 2px solid var(--text-secondary);
+}
+
+.checkbox-item label {
+  cursor: pointer;
+}
+
+.badge-container {
+  background-color: #8080804d;
+  display: inline-block;
+  position: relative;
+  padding: 1rem 2rem;
+  border-radius: 2rem;
+}
+
+.badge-container h2 {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--white-primary);
+}
+
+.badge {
+  position: absolute;
+  right: 0;
+  bottom: -1rem;
+  font-size: 0.5rem;
+  font-weight: 500;
+  border-radius: 2rem;
+  padding: 0.5rem 1rem;
+}
+
+.badge ul li {
+  margin-left: 0.5rem;
+}
