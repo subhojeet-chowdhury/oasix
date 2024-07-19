@@ -4,12 +4,20 @@
   box-sizing: border-box;
 }
 
+html {
+  overflow-y: scroll;
+  height: 100%;
+  -webkit-overflow-scrolling: touch;
+}
+
 body {
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
   background-color: var(--bg-soft-black);
   padding: 2rem 4rem;
+
+  overflow-y: visible;
 }
 
 h1,
