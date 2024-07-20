@@ -1,6 +1,7 @@
 import { useRef, useEffect, useState } from "react";
 import "../styles/AnimatedSection.css";
-import animation from "../assets/animation.mp4";
+import animation from "../assets/animation_compressed.mp4";
+import placeholderImage from "../assets/hero-image.svg";
 
 const AnimatedSection = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -51,7 +52,7 @@ const AnimatedSection = () => {
 
   return (
     <div ref={sectionRef} className="animated-section">
-      {!videoLoaded && <div className="loading">Loading...</div>}
+      {!videoLoaded && <img src={placeholderImage} className="placeholder-image"></img>}
       <video ref={videoRef} src={animation} muted playsInline preload="auto" loop />
     </div>
   );
