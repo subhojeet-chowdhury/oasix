@@ -1,7 +1,7 @@
 import { useRef, useEffect, useState } from "react";
 import "../styles/AnimatedSection.css";
 import animation from "../assets/animation_compressed.mp4";
-import placeholderImage from "../assets/hero-image.svg";
+import placeholderImage from "../assets/placeholder.png";
 
 const AnimatedSection = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
