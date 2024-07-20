@@ -1,12 +1,45 @@
+import React, { useRef } from "react";
 import "../styles/Gallery.css";
 import { galleryData, GalleryItem } from "../utils/gallaryData";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useGSAP } from "@gsap/react";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const Gallery = () => {
+  const sectionRef = useRef<HTMLElement>(null);
+  const triggerRef = useRef<HTMLDivElement>(null);
+  const galleriesRef = useRef<HTMLDivElement>(null);
+
+  useGSAP(() => {
+    const section = sectionRef.current;
+    const galleries = galleriesRef.current;
+
+    if (section && galleries) {
+      const totalScroll = galleries.scrollWidth - galleries.offsetWidth;
+
+      gsap.to(galleries, {
+        x: -totalScroll,
+        ease: "none",
+        scrollTrigger: {
+          trigger: triggerRef.current,
+          start: "top top",
+          end: `+=${totalScroll}`,
+          pin: true,
+          scrub: 1,
+          anticipatePin: 1,
+          invalidateOnRefresh: true,
+        },
+      });
+    }
+  }, []);
+
   return (
-    <section className="galleries-container">
+    <section ref={sectionRef} className="galleries-container">
       <h2>Explore the functions of the marketplace</h2>
-      <div className="galleries-wrapper">
-        <div className="galleries">
+      <div ref={triggerRef} className="galleries-wrapper">
+        <div ref={galleriesRef} className="galleries">
           {galleryData.map((gallery: GalleryItem, index: number) => (
             <div className="gallery" key={index}>
               <div className="gallery-image">

@@ -1,14 +1,12 @@
 .galleries-container {
   margin-top: 3rem;
   text-align: center;
-  height: 100vh;
 }
 .galleries-container > h2 {
   font-weight: 500;
   font-size: 2.5rem;
   letter-spacing: -2px;
   color: var(--white-primary);
-  margin-bottom: 2rem;
   text-align: left;
 }
 
@@ -17,9 +15,10 @@
 }
 
 .galleries {
+  padding-top: 2rem;
   display: flex;
   gap: 2rem;
-  width: max-content;
+  flex-wrap: nowrap;
 }
 
 .gallery {
